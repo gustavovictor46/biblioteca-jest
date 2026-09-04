@@ -50,6 +50,7 @@ describe('Investigação do sistema de biblioteca', () => {
         expect(contarLivros()).toBe(5);
     });
 
+   // Informações
     it('Deve retornar a quantidade exata da lista', () => {
         const infos = obterInformacoes();
 
@@ -60,6 +61,14 @@ describe('Investigação do sistema de biblioteca', () => {
             provincia: 'ON',
         });
 
+    });
+    // Taxa de atraso
+    it('deve calcular a taxa de atraso corretamente considerando valores decimais', () => {
+        const taxa3Dias = calcularTaxaAtraso(3);
+        const taxa1Dia = calcularTaxaAtraso(1);
+
+        expect(taxa3Dias).toBeCloseTo(4.5, 2);
+        expect(taxa1Dia).toBeCloseTo(1.5, 2);
     });
 
 
