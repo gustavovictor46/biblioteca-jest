@@ -6,7 +6,7 @@ import {
     contarLivros,
     obterInformacoes,
     calcularTaxaAtraso
-} from './biblioteca.js';
+} from '../src/biblioteca.js';
 
 
 // Livros
